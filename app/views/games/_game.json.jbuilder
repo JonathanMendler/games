@@ -1,4 +1,3 @@
-json.id game.id
 json.manufacturer game.manufacturer
 json.console game.console
 json.price game.price
