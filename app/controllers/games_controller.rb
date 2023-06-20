@@ -20,4 +20,17 @@ class GamesController < ApplicationController
     @game = Game.find_by(id: params[:id])
     render :show
   end
+
+  def update
+    @game = Game.find_by(id: params[:id])
+    @game.update(
+      manufacturer: params[:manufacturer] || @game.manufacturer,
+      console: params[:console] || @game.console,
+      price: params[:price] || @game.price,
+      storage: params[:storage] || @game.storage,
+      description: params[:description] || @game.description,
+      image_url: params[:image_url] || @game.image_url,
+    )
+    render :show
+  end
 end
