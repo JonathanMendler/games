@@ -15,4 +15,9 @@ class GamesController < ApplicationController
     )
     render :show
   end
+
+  def show
+    @game = Game.find_by(id: params[:id])
+    render :show
+  end
 end
