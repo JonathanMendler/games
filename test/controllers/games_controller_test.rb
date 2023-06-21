@@ -26,7 +26,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
 
   test "update" do
     game = Game.first
-    patch "/games/#{Game.first.id}.json", params: { manufacturer: "Updated name"}
+    patch "/games/#{Game.first.id}.json", params: { manufacturer: "Updated name" }
     assert_response 200
 
     data = JSON.parse(response.body)
@@ -39,5 +39,4 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
       assert_response 200
     end
   end
-    
 end
